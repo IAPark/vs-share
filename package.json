@@ -19,8 +19,23 @@
             {
                 "command": "vs-share.broadcast",
                 "title": "Start Broadcast"
+            },
+            {
+                "command": "vs-share.stop",
+                "title": "Stop Broadcast"
             }
-        ]
+        ],
+        "configuration": {
+            "type": "object",
+            "title": "VS-Share configuration",
+            "properties": {
+                "vs-share.server": {
+                    "type": ["string", null],
+                    "default": null,
+                    "description": "The server to broadcast changes to"
+                }
+            }
+        }
     },
     "scripts": {
         "vscode:prepublish": "tsc -p ./",
